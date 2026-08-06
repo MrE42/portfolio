@@ -1,0 +1,403 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const moments = [
+	{ src: '/travel/hobbiton.jpg', place: 'Hobbiton', note: 'Matamata, New Zealand', class: 'wide' },
+	{ src: '/travel/paris.jpg', place: 'Paris', note: 'France', class: 'portrait' },
+	{ src: '/travel/chichen-itza.jpg', place: 'A friend and a TARDIS', note: 'Disney World · Orlando', class: 'portrait' },
+	{ src: '/travel/mirror.jpg', place: 'Through the looking glass', note: 'Finding strange rooms everywhere', class: 'tall' },
+];
+---
+
+<Layout
+	title="Beyond Code | Elijah Schoneweis"
+	description="A personal travel journal from Elijah Schoneweis: six months abroad through Japan, Australia, Mexico, and beyond."
+>
+	<div class="travel-shell">
+		<header class="nav" aria-label="Primary navigation">
+			<a class="wordmark" href="/" aria-label="Elijah Schoneweis, portfolio home">
+				<span class="mark">E42</span>
+				<span class="wordmark-text">Elijah Schoneweis</span>
+			</a>
+			<nav>
+				<a href="/">Portfolio</a>
+				<a href="#japan">Japan</a>
+				<a href="#diving">Diving</a>
+				<a class="instagram" href="https://www.instagram.com/mister_e.42/" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="hero-photo">
+					<img src="/travel/jungle.jpg" alt="Elijah looking across a forested mountain landscape" width="1800" height="1350" fetchpriority="high" />
+					<div class="coordinates">40°45' N / 73°59' W</div>
+				</div>
+				<div class="hero-title">
+					<p class="kicker"><span></span> Beyond the code · Field notes 2024</p>
+					<h1>The long way<br /><em>forward.</em></h1>
+					<p class="dek">Six months, a standby pass, and a decision to see what was beyond the next departure gate.</p>
+				</div>
+				<div class="hero-stats" aria-label="Travel summary">
+					<div><strong>06</strong><span>months moving</span></div>
+					<div><strong>03</strong><span>defining chapters</span></div>
+					<div><strong>AOW</strong><span>scuba certified</span></div>
+				</div>
+			</section>
+
+			<section class="origin" aria-labelledby="origin-title">
+				<div class="origin-label">
+					<p>00 / Why I left</p>
+					<span>Lincoln, NE → Everywhere</span>
+				</div>
+				<div class="origin-copy">
+					<h2 id="origin-title">In 2023, I unexpectedly lost my brother.</h2>
+					<p class="lead">In the months that followed, my step-grandfather offered me the use of a standby pass for United flights. It was an act of kindness that opened the world at exactly the moment I needed somewhere to go.</p>
+					<div class="columns">
+						<p>For the first six months of 2024, I traveled. Not to check countries off a list, but to be present in places completely unlike home: navigating Tokyo, living aboard a dive boat off Cairns, descending into Mexican cenotes, and learning to be comfortable with plans that changed by the hour.</p>
+						<p>That period did not make grief simple. It did make my world larger. Travel taught me to adapt quickly, ask better questions, and accept that the most worthwhile experiences rarely arrive on a predictable schedule.</p>
+					</div>
+				</div>
+				<figure class="origin-image">
+					<img src="/travel/mirror.jpg" alt="Elijah reflected repeatedly in a blue mirrored installation" width="1350" height="1800" />
+					<figcaption><span>001</span> A different angle changes everything.</figcaption>
+				</figure>
+			</section>
+
+			<div class="route" aria-label="Selected route">
+				<span>Lincoln</span><i></i><span>Tokyo</span><i></i><span>Kyoto</span><i></i><span>Osaka</span><i></i><span>Cairns</span><i></i><span>Yucatán</span>
+			</div>
+
+			<section class="chapter japan" id="japan" aria-labelledby="japan-title">
+				<div class="chapter-heading">
+					<p>01 / Japan</p>
+					<div>
+						<h2 id="japan-title">The place I kept<br /><em>coming back to.</em></h2>
+						<p>Japan became the center of those six months: equal parts old and new, quiet and electric. My usual route began in Tokyo, continued by Shinkansen to Kyoto, and ended in Osaka. I went for the food, design, history, games, and animation. I kept returning because every stop made the familiar feel new again.</p>
+					</div>
+				</div>
+				<div class="japan-grid">
+					<figure class="golden">
+						<img src="/travel/kinkakuji.jpg" alt="Elijah at Kinkaku-ji, the Golden Pavilion in Kyoto" width="1350" height="1800" />
+						<figcaption><strong>Kyoto</strong><span>Kinkaku-ji · Golden Pavilion</span></figcaption>
+					</figure>
+					<figure class="gundam">
+						<img src="/travel/gundam.jpg" alt="Elijah in front of the life-size Unicorn Gundam in Tokyo" width="1350" height="1800" />
+						<figcaption><strong>Tokyo</strong><span>Unicorn Gundam · Odaiba</span></figcaption>
+					</figure>
+					<figure class="eva">
+						<img src="/travel/evangelion.jpg" alt="Elijah at the Evangelion thirtieth anniversary exhibition" width="1800" height="1350" />
+						<figcaption><strong>Tokyo</strong><span>Evangelion · 30th anniversary</span></figcaption>
+					</figure>
+				</div>
+				<div class="city-sequence" aria-label="Typical Japan route">
+					<article>
+						<img src="/travel/akihabara.jpg" alt="Elijah walking through Akihabara in Tokyo" width="1350" height="1800" loading="lazy" />
+						<div><span>01</span><strong>Tokyo</strong><small>Start in Akihabara</small></div>
+					</article>
+					<i aria-hidden="true">新幹線</i>
+					<article>
+						<img src="/travel/fushimi-inari.jpg" alt="The torii paths at Fushimi Inari in Kyoto" width="1350" height="1800" loading="lazy" />
+						<div><span>02</span><strong>Kyoto</strong><small>Fushimi Inari</small></div>
+					</article>
+					<i aria-hidden="true">新幹線</i>
+					<article>
+						<img src="/travel/usj-entrance.jpg" alt="Elijah at the entrance to Super Nintendo World at Universal Studios Japan" width="1350" height="1800" loading="lazy" />
+						<div><span>03</span><strong>Osaka</strong><small>Universal Studios Japan</small></div>
+					</article>
+				</div>
+				<div class="osaka-feature">
+					<div class="osaka-copy">
+						<p>Osaka / USJ</p>
+						<h3>Stepping into the games I grew up with.</h3>
+						<span>Super Nintendo World turns level design into a physical place: paths, sightlines, sound cues, hidden details, and question blocks included.</span>
+					</div>
+					<figure>
+						<img src="/travel/usj-mushroom-kingdom.jpg" alt="Elijah inside the Mushroom Kingdom at Super Nintendo World" width="1350" height="1800" loading="lazy" />
+					</figure>
+					<figure>
+						<img src="/travel/usj-question-block.jpg" alt="Elijah seated beneath a glowing question block at Super Nintendo World" width="1350" height="1800" loading="lazy" />
+					</figure>
+				</div>
+			</section>
+
+			<section class="chapter ocean" id="diving" aria-labelledby="ocean-title">
+				<div class="ocean-image">
+					<img src="/travel/scuba.jpg" alt="Elijah scuba diving in open blue water off Cairns" width="1800" height="1350" />
+					<span class="depth">DESCENT // 18 M</span>
+				</div>
+				<div class="ocean-copy">
+					<p class="chapter-index">02 / Australia</p>
+					<h2 id="ocean-title">Three days<br />off the <em>grid.</em></h2>
+					<p class="lead">I lived aboard a dive boat for three days off the coast of Cairns and earned my Advanced Open Water certification.</p>
+					<p>Life narrowed to weather, equipment checks, meals with strangers, and the next descent. Underwater, communication becomes deliberate and every decision has a consequence. It is one of the clearest places I know.</p>
+					<div class="dive-facts">
+						<div><strong>3</strong><span>days liveaboard</span></div>
+						<div><strong>AOW</strong><span>certification earned</span></div>
+						<div><strong>∞</strong><span>reasons to return</span></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="chapter mexico" aria-labelledby="mexico-title">
+				<div class="mexico-copy">
+					<p class="chapter-index">03 / Mexico</p>
+					<h2 id="mexico-title">History above.<br /><em>Another world below.</em></h2>
+					<p>I traveled to the Yucatán to stand beneath Chichén Itzá and dive the cenotes: freshwater caverns where sunlight cuts through clear water into chambers below the jungle. One journey held both the scale of human history and the quiet of a place hidden underground.</p>
+				</div>
+				<figure>
+					<img src="/travel/times-square.jpg" alt="Elijah at El Castillo in Chichén Itzá, Mexico" width="1350" height="1800" />
+					<figcaption><span>20.6843° N</span><span>88.5678° W</span></figcaption>
+				</figure>
+			</section>
+
+			<section class="curiosity" aria-labelledby="curiosity-title">
+				<div class="curiosity-heading">
+					<p>04 / The rest of the map</p>
+					<h2 id="curiosity-title">Curiosity is the<br />common thread.</h2>
+					<p>Travel, scuba, science fiction, Lego, games, and software all begin the same way for me: wanting to know what is inside, underneath, or around the next corner.</p>
+				</div>
+				<div class="moment-grid">
+					{moments.map((moment, index) => (
+						<figure class={moment.class}>
+							<img src={moment.src} alt={`${moment.place}, ${moment.note}`} width="1600" height="1200" loading="lazy" />
+							<figcaption><span>0{index + 1}</span><div><strong>{moment.place}</strong><small>{moment.note}</small></div></figcaption>
+						</figure>
+					))}
+				</div>
+			</section>
+
+			<section class="next" aria-labelledby="next-title">
+				<p>There is always another departure board.</p>
+				<h2 id="next-title">Still moving.<br /><em>Still curious.</em></h2>
+				<div class="next-links">
+					<a href="/">Return to the work <span>↗</span></a>
+					<a href="https://www.instagram.com/mister_e.42/" target="_blank" rel="noreferrer">Follow the next trip <span>↗</span></a>
+				</div>
+			</section>
+		</main>
+
+		<footer><span>© 2026 Elijah Schoneweis</span><span>FIELD NOTES // 2024—PRESENT</span></footer>
+	</div>
+</Layout>
+
+<style>
+	:global(:root) {
+		--night: #0a1012;
+		--paper: #e9e4d8;
+		--paper-dark: #c5bfb2;
+		--ink: #11181a;
+		--white: #f2f2ec;
+		--orange: #ff6d3d;
+		--sky: #7fd5e3;
+		--line: rgba(240, 242, 236, 0.16);
+		--display: 'Syne', sans-serif;
+		--mono: 'DM Mono', monospace;
+	}
+
+	.travel-shell { overflow: hidden; background: var(--night); color: var(--white); }
+	.nav { position: absolute; z-index: 20; top: 0; left: 50%; display: flex; align-items: center; justify-content: space-between; width: min(1400px, calc(100% - 96px)); padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,.25); transform: translateX(-50%); }
+	.wordmark { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+	.mark { display: grid; place-items: center; width: 37px; height: 37px; border: 1px solid var(--orange); color: var(--orange); font: 500 11px var(--mono); clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px); }
+	.wordmark-text { font: 600 15px var(--display); }
+	.nav nav { display: flex; align-items: center; gap: 32px; }
+	.nav nav a { color: rgba(255,255,255,.76); font: 500 10px var(--mono); text-decoration: none; text-transform: uppercase; letter-spacing: .09em; }
+	.nav nav a:hover { color: #fff; }
+	.nav .instagram { padding: 11px 14px; border: 1px solid rgba(255,255,255,.3); color: #fff; }
+	.instagram span { color: var(--orange); }
+
+	.hero { position: relative; min-height: 100vh; background: #101719; }
+	.hero-photo { position: absolute; inset: 0 0 0 42%; overflow: hidden; }
+	.hero-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #101719 0%, transparent 34%), linear-gradient(0deg, rgba(5,8,9,.68), transparent 42%); }
+	.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; filter: saturate(.82) contrast(1.06); }
+	.coordinates { position: absolute; z-index: 2; right: 28px; bottom: 26px; color: rgba(255,255,255,.65); font: 400 9px var(--mono); letter-spacing: .12em; }
+	.hero-title { position: relative; z-index: 3; width: min(1400px, calc(100% - 96px)); margin: 0 auto; padding-top: clamp(190px, 24vh, 280px); }
+	.kicker { display: flex; align-items: center; gap: 11px; margin: 0; color: rgba(255,255,255,.65); font: 500 10px var(--mono); text-transform: uppercase; letter-spacing: .12em; }
+	.kicker span { width: 28px; height: 1px; background: var(--orange); }
+	h1 { max-width: 900px; margin: 25px 0 26px; font: 600 clamp(66px, 8vw, 126px)/.87 var(--display); letter-spacing: -.07em; }
+	h1 em, .chapter h2 em, .next h2 em { color: var(--orange); font-style: normal; }
+	.dek { max-width: 525px; margin: 0; color: rgba(255,255,255,.73); font-size: clamp(16px, 1.4vw, 20px); line-height: 1.7; }
+	.hero-stats { position: absolute; z-index: 3; bottom: 43px; left: max(48px, calc((100% - 1400px) / 2)); display: flex; gap: 48px; }
+	.hero-stats div { display: flex; align-items: center; gap: 12px; }
+	.hero-stats strong { color: var(--orange); font: 600 26px var(--display); }
+	.hero-stats span { max-width: 74px; color: rgba(255,255,255,.5); font: 400 8px/1.4 var(--mono); text-transform: uppercase; }
+
+	.origin { display: grid; grid-template-columns: .65fr 1.5fr .9fr; gap: clamp(35px, 6vw, 100px); width: min(1400px, calc(100% - 96px)); margin: 0 auto; padding: 150px 0; }
+	.origin-label p, .chapter-heading > p, .chapter-index, .curiosity-heading > p { margin: 0 0 12px; color: var(--orange); font: 500 9px var(--mono); text-transform: uppercase; letter-spacing: .11em; }
+	.origin-label span { color: #667478; font: 400 9px var(--mono); text-transform: uppercase; }
+	.origin-copy h2 { margin: 0 0 38px; font: 600 clamp(35px, 4vw, 60px)/1.05 var(--display); letter-spacing: -.05em; }
+	.origin-copy .lead { margin: 0 0 35px; color: #d3dcdd; font-size: 19px; line-height: 1.75; }
+	.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; }
+	.columns p { margin: 0; color: #87969a; font-size: 13px; line-height: 1.85; }
+	.origin-image { align-self: end; margin: 0; }
+	.origin-image img { display: block; width: 100%; height: 480px; object-fit: cover; }
+	.origin-image figcaption { display: flex; gap: 14px; margin-top: 12px; color: #748286; font: 400 9px var(--mono); text-transform: uppercase; }
+	.origin-image figcaption span { color: var(--orange); }
+
+	.route { display: flex; align-items: center; justify-content: center; width: min(1400px, calc(100% - 96px)); margin: 0 auto; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: #7d8a8d; font: 400 9px var(--mono); text-transform: uppercase; letter-spacing: .12em; }
+	.route i { flex: 1; max-width: 120px; height: 1px; margin: 0 18px; background: #344044; }
+	.route i::after { content: ''; display: block; width: 5px; height: 5px; margin: -2px auto 0; border-radius: 50%; background: var(--orange); }
+
+	.chapter { width: min(1400px, calc(100% - 96px)); margin: 0 auto; padding: 150px 0; }
+	.chapter-heading { display: grid; grid-template-columns: .65fr 2.4fr; gap: 60px; margin-bottom: 80px; }
+	.chapter-heading > div { display: grid; grid-template-columns: 1.4fr .75fr; gap: 75px; align-items: end; }
+	.chapter h2 { margin: 0; font: 600 clamp(50px, 6vw, 90px)/.97 var(--display); letter-spacing: -.065em; }
+	.chapter-heading > div > p, .mexico-copy > p:last-child { margin: 0 0 8px; color: #89979a; font-size: 14px; line-height: 1.85; }
+	.japan-grid { display: grid; grid-template-columns: 1fr .72fr; grid-template-rows: 530px 330px; gap: 18px; }
+	.japan-grid figure { position: relative; margin: 0; overflow: hidden; background: #151d20; }
+	.japan-grid .golden { grid-row: 1 / 3; }
+	.japan-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 700ms cubic-bezier(.2,.7,.2,1); }
+	.japan-grid figure:hover img, .moment-grid figure:hover img { transform: scale(1.025); }
+	.japan-grid .golden img { object-position: 50% 43%; }
+	.japan-grid .gundam img { object-position: 50% 36%; }
+	.japan-grid .eva img { object-position: 50% 49%; }
+	.japan-grid figcaption { position: absolute; right: 0; bottom: 0; left: 0; display: flex; align-items: end; justify-content: space-between; padding: 55px 22px 20px; background: linear-gradient(transparent, rgba(4,7,8,.88)); }
+	.japan-grid figcaption strong { font: 600 20px var(--display); }
+	.japan-grid figcaption span { color: rgba(255,255,255,.6); font: 400 8px var(--mono); text-transform: uppercase; }
+	.city-sequence { display: grid; grid-template-columns: 1fr 60px 1fr 60px 1fr; gap: 14px; align-items: center; margin-top: 70px; }
+	.city-sequence article { position: relative; height: 430px; overflow: hidden; background: #151d20; }
+	.city-sequence article::after { content: ''; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(4,7,8,.9)); }
+	.city-sequence img { width: 100%; height: 100%; object-fit: cover; }
+	.city-sequence article:nth-of-type(1) img { object-position: 50% 55%; }
+	.city-sequence article:nth-of-type(2) img { object-position: 50% 50%; }
+	.city-sequence article:nth-of-type(3) img { object-position: 50% 42%; }
+	.city-sequence article div { position: absolute; z-index: 2; right: 18px; bottom: 18px; left: 18px; display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; align-items: center; }
+	.city-sequence article span { grid-row: 1 / 3; color: var(--orange); font: 400 9px var(--mono); }
+	.city-sequence article strong { font: 600 20px var(--display); }
+	.city-sequence article small { color: rgba(255,255,255,.58); font: 400 8px var(--mono); text-transform: uppercase; }
+	.city-sequence > i { color: #536164; font: 400 8px var(--mono); text-align: center; }
+	.city-sequence > i::after { content: '→'; display: block; margin-top: 5px; color: var(--orange); font-size: 16px; }
+	.osaka-feature { display: grid; grid-template-columns: .8fr 1fr 1fr; gap: 15px; margin-top: 15px; }
+	.osaka-feature > * { min-height: 390px; }
+	.osaka-copy { display: flex; flex-direction: column; justify-content: end; padding: 32px; border: 1px solid var(--line); }
+	.osaka-copy p { margin: 0 0 auto; color: var(--orange); font: 500 9px var(--mono); text-transform: uppercase; letter-spacing: .1em; }
+	.osaka-copy h3 { margin: 60px 0 18px; font: 600 clamp(29px, 3vw, 43px)/1.05 var(--display); letter-spacing: -.045em; }
+	.osaka-copy span { color: #859397; font-size: 12px; line-height: 1.75; }
+	.osaka-feature figure { margin: 0; overflow: hidden; background: #151d20; }
+	.osaka-feature img { width: 100%; height: 100%; object-fit: cover; }
+	.osaka-feature figure:first-of-type img { object-position: 50% 38%; }
+	.osaka-feature figure:last-of-type img { object-position: 50% 50%; }
+
+	.ocean { display: grid; grid-template-columns: 1.35fr .65fr; width: 100%; padding: 0; background: #071b27; }
+	.ocean-image { position: relative; min-height: 760px; overflow: hidden; }
+	.ocean-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 70%, #071b27); }
+	.ocean-image img { width: 100%; height: 100%; object-fit: cover; }
+	.depth { position: absolute; z-index: 2; bottom: 26px; left: 32px; padding: 8px 10px; background: rgba(3,15,22,.78); color: var(--sky); font: 400 9px var(--mono); letter-spacing: .12em; }
+	.ocean-copy { align-self: center; max-width: 520px; padding: 90px 70px 90px 30px; }
+	.ocean-copy h2 em { color: var(--sky); }
+	.ocean-copy .lead { margin: 35px 0 22px; color: #d1e4e8; font-size: 18px; line-height: 1.7; }
+	.ocean-copy > p:not(.chapter-index):not(.lead) { margin: 0; color: #7fa0a8; font-size: 13px; line-height: 1.85; }
+	.dive-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 45px; padding-top: 25px; border-top: 1px solid rgba(127,213,227,.22); }
+	.dive-facts div { display: flex; flex-direction: column; gap: 5px; }
+	.dive-facts strong { color: var(--sky); font: 600 23px var(--display); }
+	.dive-facts span { color: #66858d; font: 400 7px/1.4 var(--mono); text-transform: uppercase; }
+
+	.mexico { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(65px, 10vw, 160px); align-items: center; }
+	.mexico-copy { max-width: 570px; }
+	.mexico-copy h2 { margin-bottom: 38px; }
+	.mexico figure { margin: 0; }
+	.mexico figure img { display: block; width: 100%; height: 760px; object-fit: cover; object-position: 50% 50%; }
+	.mexico figcaption { display: flex; justify-content: space-between; margin-top: 13px; color: #667478; font: 400 8px var(--mono); letter-spacing: .12em; }
+
+	.curiosity { padding: 140px max(48px, calc((100% - 1400px) / 2)); background: var(--paper); color: var(--ink); }
+	.curiosity-heading { display: grid; grid-template-columns: .65fr 1.3fr .75fr; gap: 60px; align-items: end; margin-bottom: 70px; }
+	.curiosity-heading h2 { margin: 0; font: 600 clamp(45px, 5.5vw, 80px)/1 var(--display); letter-spacing: -.06em; }
+	.curiosity-heading > p:last-child { margin: 0; color: #596164; font-size: 13px; line-height: 1.8; }
+	.moment-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 180px; gap: 15px; }
+	.moment-grid figure { position: relative; margin: 0; overflow: hidden; background: #b9b4aa; }
+	.moment-grid .wide { grid-column: 1 / 8; grid-row: 1 / 4; }
+	.moment-grid .portrait { grid-column: span 5; grid-row: span 4; }
+	.moment-grid .portrait:nth-child(3) { grid-column: 1 / 6; }
+	.moment-grid .tall { grid-column: 6 / 13; grid-row: 4 / 8; }
+	.moment-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 700ms cubic-bezier(.2,.7,.2,1); }
+	.moment-grid figcaption { position: absolute; right: 0; bottom: 0; left: 0; display: flex; gap: 15px; align-items: end; padding: 65px 18px 17px; background: linear-gradient(transparent, rgba(8,10,10,.86)); color: white; }
+	.moment-grid figcaption > span { color: var(--orange); font: 400 8px var(--mono); }
+	.moment-grid figcaption div { display: flex; flex-direction: column; gap: 3px; }
+	.moment-grid figcaption strong { font: 600 16px var(--display); }
+	.moment-grid figcaption small { color: rgba(255,255,255,.62); font: 400 8px var(--mono); text-transform: uppercase; }
+
+	.next { width: min(1400px, calc(100% - 96px)); margin: 0 auto; padding: 150px 0 100px; }
+	.next > p { color: #69777a; font: 400 10px var(--mono); text-transform: uppercase; letter-spacing: .1em; }
+	.next h2 { margin: 30px 0 60px; font: 600 clamp(64px, 9vw, 130px)/.9 var(--display); letter-spacing: -.075em; }
+	.next-links { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+	.next-links a { display: flex; justify-content: space-between; padding: 20px 22px; border: 1px solid var(--line); font: 500 10px var(--mono); text-decoration: none; text-transform: uppercase; letter-spacing: .08em; }
+	.next-links a:hover { border-color: var(--orange); background: rgba(255,109,61,.04); }
+	.next-links span { color: var(--orange); }
+	footer { display: flex; justify-content: space-between; width: min(1400px, calc(100% - 96px)); margin: 0 auto; padding: 30px 0; border-top: 1px solid var(--line); color: #4f5d60; font: 400 8px var(--mono); text-transform: uppercase; letter-spacing: .1em; }
+
+	@media (max-width: 1000px) {
+		.hero-photo { left: 30%; }
+		.origin { grid-template-columns: .45fr 1.5fr; }
+		.origin-image { grid-column: 2; width: 70%; }
+		.chapter-heading > div { grid-template-columns: 1fr; gap: 30px; }
+		.ocean { grid-template-columns: 1fr 1fr; }
+		.ocean-copy { padding-right: 35px; }
+		.curiosity-heading { grid-template-columns: .5fr 1.5fr; }
+		.curiosity-heading > p:last-child { grid-column: 2; }
+	}
+
+	@media (max-width: 760px) {
+		.nav, .hero-title, .origin, .route, .chapter:not(.ocean), .next, footer { width: calc(100% - 40px); }
+		.nav { padding: 20px 0; }
+		.wordmark-text, .nav nav > a:not(.instagram) { display: none; }
+		.nav nav { gap: 0; }
+		.hero { min-height: 820px; }
+		.hero-photo { inset: 0; opacity: .72; }
+		.hero-photo::after { background: linear-gradient(90deg, rgba(8,14,16,.9), rgba(8,14,16,.1)), linear-gradient(0deg, #101719 5%, transparent 55%); }
+		.hero-title { padding-top: 170px; }
+		h1 { font-size: clamp(58px, 18vw, 82px); }
+		.dek { max-width: 88%; }
+		.hero-stats { right: 20px; bottom: 35px; left: 20px; justify-content: space-between; gap: 12px; }
+		.hero-stats div { flex-direction: column; align-items: start; gap: 3px; }
+		.origin { grid-template-columns: 1fr; gap: 40px; padding: 90px 0; }
+		.origin-copy .lead { font-size: 17px; }
+		.columns { grid-template-columns: 1fr; gap: 20px; }
+		.origin-image { grid-column: 1; width: 100%; }
+		.origin-image img { height: 520px; }
+		.route { justify-content: flex-start; overflow: hidden; white-space: nowrap; }
+		.route i { min-width: 35px; margin: 0 9px; }
+		.chapter { padding: 100px 0; }
+		.chapter-heading { grid-template-columns: 1fr; gap: 35px; margin-bottom: 50px; }
+		.chapter-heading > div { grid-template-columns: 1fr; gap: 25px; }
+		.chapter h2 { font-size: clamp(46px, 13vw, 64px); }
+		.japan-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 500px 280px; }
+		.japan-grid .golden { grid-column: 1 / 3; grid-row: 1; }
+		.japan-grid .gundam, .japan-grid .eva { grid-row: 2; }
+		.japan-grid figcaption { align-items: start; flex-direction: column; gap: 4px; }
+		.city-sequence { grid-template-columns: 1fr; gap: 12px; }
+		.city-sequence article { height: 470px; }
+		.city-sequence > i { display: none; }
+		.osaka-feature { grid-template-columns: 1fr 1fr; }
+		.osaka-feature .osaka-copy { grid-column: 1 / 3; min-height: 310px; }
+		.osaka-feature figure { min-height: 380px; }
+		.ocean { grid-template-columns: 1fr; }
+		.ocean-image { min-height: 480px; }
+		.ocean-image::after { background: linear-gradient(0deg, #071b27, transparent 35%); }
+		.ocean-copy { padding: 70px 20px 90px; }
+		.mexico { grid-template-columns: 1fr; gap: 45px; }
+		.mexico figure img { height: 570px; }
+		.curiosity { padding: 90px 20px; }
+		.curiosity-heading { grid-template-columns: 1fr; gap: 28px; }
+		.curiosity-heading > p:last-child { grid-column: 1; }
+		.moment-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 230px; }
+		.moment-grid .wide, .moment-grid .portrait, .moment-grid .portrait:nth-child(3), .moment-grid .tall { grid-column: span 1; grid-row: span 2; }
+		.moment-grid .wide, .moment-grid .tall { grid-column: 1 / 3; }
+		.next { padding: 100px 0 70px; }
+		.next h2 { font-size: clamp(58px, 17vw, 84px); }
+		.next-links { grid-template-columns: 1fr; }
+	}
+
+	@media (max-width: 440px) {
+		.japan-grid { display: grid; grid-template-columns: 1fr; grid-template-rows: 470px 390px 260px; }
+		.japan-grid .golden, .japan-grid .gundam, .japan-grid .eva { grid-column: 1; grid-row: auto; }
+		.osaka-feature { grid-template-columns: 1fr; }
+		.osaka-feature .osaka-copy { grid-column: 1; }
+		.osaka-feature figure { min-height: 470px; }
+		.dive-facts { gap: 7px; }
+		.moment-grid { display: block; }
+		.moment-grid figure { height: 440px; margin-bottom: 12px; }
+		.moment-grid .wide { height: 300px; }
+		footer { gap: 20px; }
+		footer span:last-child { text-align: right; }
+	}
+</style>

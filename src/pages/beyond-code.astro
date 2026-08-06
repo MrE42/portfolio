@@ -7,6 +7,8 @@ const moments = [
 	{ src: '/travel/chichen-itza.jpg', place: 'A friend and a TARDIS', note: 'Disney World · Orlando', class: 'portrait' },
 	{ src: '/travel/mirror.jpg', place: 'Through the looking glass', note: 'Finding strange rooms everywhere', class: 'tall' },
 ];
+
+const hexCells = Array.from({ length: 24 });
 ---
 
 <Layout
@@ -14,10 +16,11 @@ const moments = [
 	description="A personal travel journal from Elijah Schoneweis: six months abroad through Japan, Australia, Mexico, and beyond."
 >
 	<div class="travel-shell">
+		<div class="field-rail" aria-hidden="true"><strong>E42</strong><span>FIELD OPERATIONS ARCHIVE // 2024</span><i>RECORD STATUS: OPEN</i></div>
 		<header class="nav" aria-label="Primary navigation">
 			<a class="wordmark" href="/" aria-label="Elijah Schoneweis, portfolio home">
 				<span class="mark">E42</span>
-				<span class="wordmark-text">Elijah Schoneweis</span>
+				<span class="wordmark-text">E. Schoneweis // Field Records</span>
 			</a>
 			<nav>
 				<a href="/">Portfolio</a>
@@ -26,17 +29,22 @@ const moments = [
 				<a class="instagram" href="https://www.instagram.com/mister_e.42/" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
 			</nav>
 		</header>
+		<div class="warning-tape" aria-hidden="true"><span>EXTERNAL OPERATIONS</span><i></i><span>ARCHIVE 2024</span><i></i><span>ROUTE DATA VERIFIED</span><i></i><span>FIELD UNIT E42</span></div>
 
 		<main>
 			<section class="hero">
 				<div class="hero-photo">
 					<img src="/travel/jungle.jpg" alt="Elijah looking across a forested mountain landscape" width="1800" height="1350" fetchpriority="high" />
+					<div class="travel-hex-field" aria-hidden="true">{hexCells.map(() => <span></span>)}</div>
+					<div class="field-classification" aria-hidden="true"><span>外部</span><div><strong>EXTERNAL</strong><small>FIELD OBSERVATION RECORD</small></div></div>
 					<div class="coordinates">40°45' N / 73°59' W</div>
 				</div>
 				<div class="hero-title">
-					<p class="kicker"><span></span> Beyond the code · Field notes 2024</p>
+					<p class="kicker"><span></span> External operations · Field notes 2024</p>
+					<p class="hero-code" aria-hidden="true">記録 // 移動 // 発見</p>
 					<h1>The long way<br /><em>forward.</em></h1>
 					<p class="dek">Six months, a standby pass, and a decision to see what was beyond the next departure gate.</p>
+					<div class="field-timer" aria-label="Journey duration"><span>MISSION TIME ELAPSED</span><strong>06<i>:</i>00<i>:</i>00</strong><small>FIELD LINK // CONTINUING</small></div>
 				</div>
 				<div class="hero-stats" aria-label="Travel summary">
 					<div><strong>06</strong><span>months moving</span></div>
@@ -592,6 +600,25 @@ const moments = [
 	.next-links span { color: var(--sky); }
 	footer { border-top-color: var(--orange); color: #786f69; }
 
+	.warning-tape::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--sky), var(--amber), var(--orange), #ff176b, var(--purple), var(--sky)); }
+	.travel-hex-field { position: absolute; z-index: 2; top: 15%; right: 7%; display: grid; grid-template-columns: repeat(6, 48px); gap: 3px; width: 303px; opacity: .68; transform: rotate(-6deg); }
+	.travel-hex-field span { position: relative; aspect-ratio: 1.12; background: var(--orange); clip-path: polygon(25% 4%, 75% 4%, 100% 50%, 75% 96%, 25% 96%, 0 50%); }
+	.travel-hex-field span::after { content: ''; position: absolute; inset: 2px; background: rgba(8,7,9,.72); clip-path: inherit; }
+	.travel-hex-field span:nth-child(4n) { background: var(--sky); }
+	.travel-hex-field span:nth-child(5n) { opacity: .2; }
+	.field-classification { position: absolute; z-index: 4; top: 14%; right: 5%; display: flex; align-items: stretch; border: 2px solid var(--orange); background: rgba(8,7,9,.92); color: var(--orange); transform: rotate(2deg); }
+	.field-classification > span { display: grid; place-items: center; padding: 6px 10px; border-right: 2px solid var(--orange); font: 800 20px var(--display); }
+	.field-classification div { display: flex; flex-direction: column; justify-content: center; padding: 6px 10px; }
+	.field-classification strong { font: 800 15px/.9 var(--display); letter-spacing: .04em; }
+	.field-classification small { margin-top: 3px; font: 600 5px var(--mono); letter-spacing: .08em; }
+	.field-timer { position: relative; width: min(100%, 390px); margin-top: 24px; padding: 8px 12px 11px; border: 2px solid var(--orange); background: rgba(8,7,9,.92); }
+	.field-timer::before { content: 'REC'; position: absolute; top: -2px; right: -2px; padding: 4px 7px; background: var(--orange); color: white; font: 600 7px var(--mono); }
+	.field-timer > span { display: block; color: var(--orange); font: 600 7px var(--mono); letter-spacing: .12em; }
+	.field-timer strong { display: block; margin: -2px 0 -4px; color: var(--orange); font: 800 clamp(42px, 5vw, 67px)/1 var(--display); letter-spacing: .06em; text-shadow: 0 0 12px rgba(255,59,31,.3); }
+	.field-timer strong i { color: var(--sky); font-style: normal; animation: field-blink 1s steps(1) infinite; }
+	.field-timer small { display: block; color: #90857e; font: 500 7px var(--mono); letter-spacing: .1em; text-align: right; }
+	@keyframes field-blink { 50% { opacity: .25; } }
+
 	@media (max-width: 760px) {
 		.travel-shell::before { width: 6px; }
 		.field-rail { display: none; }
@@ -601,6 +628,8 @@ const moments = [
 		.hero-photo { inset: 0; border-left: 0; opacity: .68; }
 		.hero-photo::after { background: linear-gradient(90deg, rgba(8,7,9,.92), rgba(8,7,9,.12)), linear-gradient(0deg, #0a080b 5%, transparent 55%); }
 		.hero-title { padding-top: 170px; }
+		.travel-hex-field { top: 19%; right: -22%; opacity: .4; transform: scale(.78) rotate(-6deg); }
+		.field-classification { top: 15%; right: 12px; transform: scale(.8) rotate(2deg); transform-origin: top right; }
 		.origin, .chapter:not(.ocean), .next { padding-right: 0; padding-left: 0; border-right: 0; border-left: 0; }
 		.route { border-right: 0; border-left: 0; }
 		.ocean-image { border-right: 0; border-bottom: 2px solid var(--sky); }
@@ -613,6 +642,7 @@ const moments = [
 		h1 { font-size: clamp(70px, 22vw, 94px); line-height: .72; }
 		.hero-code { font-size: 9px; }
 		.dek { font-size: 10px; }
+		.field-timer strong { font-size: 43px; }
 		.origin-image, .mexico figure { box-shadow: 6px 6px 0 rgba(108,53,161,.25); }
 		.japan-grid, .moment-grid { padding: 5px; }
 		.next h2 { line-height: .75; }

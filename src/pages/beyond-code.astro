@@ -44,7 +44,6 @@ const hexCells = Array.from({ length: 24 });
 					<p class="hero-code" aria-hidden="true">記録 // 移動 // 発見</p>
 					<h1>The long way<br /><em>forward.</em></h1>
 					<p class="dek">Six months, a standby pass, and a decision to see what was beyond the next departure gate.</p>
-					<div class="field-timer" aria-label="Journey duration"><span>MISSION TIME ELAPSED</span><strong>06<i>:</i>00<i>:</i>00</strong><small>FIELD LINK // CONTINUING</small></div>
 				</div>
 				<div class="hero-stats" aria-label="Travel summary">
 					<div><strong>06</strong><span>months moving</span></div>
@@ -611,13 +610,6 @@ const hexCells = Array.from({ length: 24 });
 	.field-classification div { display: flex; flex-direction: column; justify-content: center; padding: 6px 10px; }
 	.field-classification strong { font: 800 15px/.9 var(--display); letter-spacing: .04em; }
 	.field-classification small { margin-top: 3px; font: 600 5px var(--mono); letter-spacing: .08em; }
-	.field-timer { position: relative; width: min(100%, 390px); margin-top: 24px; padding: 8px 12px 11px; border: 2px solid var(--orange); background: rgba(8,7,9,.92); }
-	.field-timer::before { content: 'REC'; position: absolute; top: -2px; right: -2px; padding: 4px 7px; background: var(--orange); color: white; font: 600 7px var(--mono); }
-	.field-timer > span { display: block; color: var(--orange); font: 600 7px var(--mono); letter-spacing: .12em; }
-	.field-timer strong { display: block; margin: -2px 0 -4px; color: var(--orange); font: 800 clamp(42px, 5vw, 67px)/1 var(--display); letter-spacing: .06em; text-shadow: 0 0 12px rgba(255,59,31,.3); }
-	.field-timer strong i { color: var(--sky); font-style: normal; animation: field-blink 1s steps(1) infinite; }
-	.field-timer small { display: block; color: #90857e; font: 500 7px var(--mono); letter-spacing: .1em; text-align: right; }
-	@keyframes field-blink { 50% { opacity: .25; } }
 
 	@media (max-width: 760px) {
 		.travel-shell::before { width: 6px; }
@@ -642,7 +634,6 @@ const hexCells = Array.from({ length: 24 });
 		h1 { font-size: clamp(70px, 22vw, 94px); line-height: .72; }
 		.hero-code { font-size: 9px; }
 		.dek { font-size: 10px; }
-		.field-timer strong { font-size: 43px; }
 		.origin-image, .mexico figure { box-shadow: 6px 6px 0 rgba(108,53,161,.25); }
 		.japan-grid, .moment-grid { padding: 5px; }
 		.next h2 { line-height: .75; }

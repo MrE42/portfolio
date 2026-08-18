@@ -36,7 +36,7 @@ const systems = [
 
 const experience = [
 	{
-		period: '2025 — Present',
+		period: '2025 — 2026',
 		role: 'Applications Analyst',
 		org: 'LI-COR',
 		copy: 'Built internal tools for scientific data analysis and instrument parsing. Designed a multimodal RAG pipeline that lets researchers query documentation, manuals, and datasets in one place.',
@@ -59,8 +59,8 @@ const experience = [
 	{
 		period: '2022 — 2023',
 		role: 'Technical Lead',
-		org: 'NASA SUITS',
-		copy: 'Led development of AR interface software for next-gen EVA suit concepts. Presented the team’s work at Johnson Space Center to NASA engineers and program managers.',
+		org: 'NASA SUITS Student Club',
+		copy: 'Led AR interface development in UNL’s NASA SUITS student club for next-gen EVA suit concepts. Presented the team’s work at Johnson Space Center to NASA engineers and program managers.',
 		stack: 'Unity XR · MRTK 3 · HoloLens 2',
 	},
 ];
@@ -272,8 +272,8 @@ const experience = [
 
 			<section class="experience" id="experience" aria-labelledby="experience-title">
 				<div class="section-heading compact">
-					<p class="section-index">03 / Experience log</p>
-					<h2 id="experience-title">Built across <span>different worlds.</span></h2>
+					<p class="section-index">03 / Engineering experience</p>
+					<h2 id="experience-title">Experience across <span>different worlds.</span></h2>
 				</div>
 				<div class="experience-list">
 					{experience.map((entry) => (
@@ -289,11 +289,15 @@ const experience = [
 
 			<section class="about" aria-labelledby="about-title">
 				<div>
-					<p class="section-index">04 / Background</p>
-					<h2 id="about-title">Built to take things apart.</h2>
+					<p class="section-index">04 / Education & background</p>
+					<h2 id="about-title">A wider foundation.</h2>
 				</div>
-				<p class="about-copy">I like understanding how systems work — whether that's a multiplayer game mod, an eye-tracking pipeline, or why my coffee maker is acting up. When I'm not coding, I'm usually scuba diving, playing Magic: The Gathering, building something in Lego, or hunting for the best ramen in town.</p>
-				<div class="degree"><strong>B.S. Computer Science</strong><span>University of Nebraska–Lincoln · 3.77 GPA · Highest University Honors · Minors in Physics & Mathematics</span></div>
+				<p class="about-copy">I like understanding how systems work — whether that’s a multiplayer game mod, an eye-tracking pipeline, or the physics behind a dive. Away from the keyboard, I’m usually scuba diving, playing Magic: The Gathering, building with Lego, exploring Japanese cuisine, or planning where to travel next.</p>
+				<div class="degree">
+					<span class="degree-label">University of Nebraska–Lincoln · 2025</span>
+					<strong>B.S. Computer Science</strong>
+					<p>Highest University Honors · 3.77 GPA<br />Minors in Physics & Mathematics</p>
+				</div>
 			</section>
 
 			<section class="contact" aria-labelledby="contact-title">
@@ -488,12 +492,30 @@ const experience = [
 	.inline-link span { color: var(--acid); }
 
 	.spell-diagram { position: relative; display: grid; align-content: end; min-height: 570px; padding: 38px; overflow: hidden; background: radial-gradient(circle at 50% 39%, rgba(62, 165, 255, 0.2), transparent 25%), linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px); background-size: auto, 42px 42px, 42px 42px; }
-	.spell-orb { position: absolute; top: 13%; left: 50%; width: 210px; aspect-ratio: 1; transform: translateX(-50%); border: 1px solid rgba(135, 191, 255, 0.4); border-radius: 50%; box-shadow: inset 0 0 55px rgba(76, 174, 255, 0.15), 0 0 60px rgba(76, 174, 255, 0.1); }
-	.spell-orb::before, .spell-orb::after, .spell-orb span { content: ''; position: absolute; border: 1px solid rgba(135, 191, 255, 0.55); border-radius: 50%; }
-	.spell-orb::before { inset: 14px 48px; transform: rotate(58deg); }
-	.spell-orb::after { inset: 37px 12px; transform: rotate(-22deg); }
-	.spell-orb span { inset: 65px 18px; transform: rotate(12deg); }
-	.spell-orb i { position: absolute; inset: 42%; border-radius: 50%; background: #d7f1ff; box-shadow: 0 0 28px 13px #4ea9ff; }
+	.spell-orb { position: absolute; top: 13%; left: 50%; width: 210px; aspect-ratio: 1; transform: translateX(-50%); border: 1px solid rgba(135, 191, 255, 0.4); border-radius: 50%; box-shadow: inset 0 0 55px rgba(76, 174, 255, 0.15), 0 0 60px rgba(76, 174, 255, 0.1); animation: rasengan-breathe 2.8s ease-in-out infinite; will-change: transform, box-shadow; }
+	.spell-orb::before, .spell-orb::after, .spell-orb span { content: ''; position: absolute; border: 1px solid rgba(135, 191, 255, 0.55); border-radius: 50%; will-change: transform; }
+	.spell-orb::before { inset: 14px 48px; transform: rotate(58deg); animation: rasengan-orbit-one 4.8s linear infinite; }
+	.spell-orb::after { inset: 37px 12px; transform: rotate(-22deg); animation: rasengan-orbit-two 3.4s linear infinite; }
+	.spell-orb span { inset: 65px 18px; transform: rotate(12deg); animation: rasengan-orbit-three 2.6s linear infinite reverse; }
+	.spell-orb i { position: absolute; inset: 42%; border-radius: 50%; background: #d7f1ff; box-shadow: 0 0 28px 13px #4ea9ff; animation: rasengan-core 1.4s ease-in-out infinite; }
+	.spell-orb i::before, .spell-orb i::after { content: ''; position: absolute; inset: -18px; border: 1px solid rgba(135, 191, 255, .65); border-radius: 50%; animation: rasengan-pulse 1.8s ease-out infinite; }
+	.spell-orb i::after { inset: -30px; animation-delay: .9s; }
+	@keyframes rasengan-breathe {
+		0%, 100% { transform: translateX(-50%) scale(.97); box-shadow: inset 0 0 48px rgba(76, 174, 255, .13), 0 0 48px rgba(76, 174, 255, .09); }
+		50% { transform: translateX(-50%) scale(1.035); box-shadow: inset 0 0 70px rgba(76, 174, 255, .23), 0 0 82px rgba(76, 174, 255, .18); }
+	}
+	@keyframes rasengan-orbit-one { to { transform: rotate(418deg); } }
+	@keyframes rasengan-orbit-two { to { transform: rotate(-382deg); } }
+	@keyframes rasengan-orbit-three { to { transform: rotate(372deg); } }
+	@keyframes rasengan-core {
+		0%, 100% { transform: scale(.88); box-shadow: 0 0 24px 11px #4ea9ff; }
+		50% { transform: scale(1.12); box-shadow: 0 0 34px 17px #4ea9ff; }
+	}
+	@keyframes rasengan-pulse {
+		0% { transform: scale(.55); opacity: 0; }
+		24% { opacity: .72; }
+		100% { transform: scale(1.25); opacity: 0; }
+	}
 	.spell-path { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(135, 191, 255, 0.35); }
 	.spell-path div { position: relative; padding: 24px 12px 0; }
 	.spell-path div::before { content: ''; position: absolute; top: -4px; left: 13px; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 8px var(--blue); }
@@ -550,12 +572,13 @@ const experience = [
 	.experience-copy { margin: 0; color: #9da8ab; font-size: 13px; line-height: 1.75; }
 	.stack { color: #6f7d81; font: 400 9px var(--mono); text-transform: uppercase; letter-spacing: 0.04em; }
 
-	.about { display: grid; grid-template-columns: 1fr 1.15fr 0.85fr; gap: 70px; align-items: end; padding: 90px 0; border-top: 1px solid var(--line); }
-	.about h2 { margin: 15px 0 0; font: 600 clamp(36px, 4vw, 58px) var(--display); letter-spacing: -0.05em; }
+	.about { display: grid; grid-template-columns: .8fr 1fr 1.2fr; gap: clamp(45px, 6vw, 90px); align-items: center; padding: 100px 0; border-top: 1px solid var(--line); }
+	.about h2 { margin: 15px 0 0; font: 600 clamp(36px, 4vw, 58px)/1 var(--display); letter-spacing: -0.05em; }
 	.about-copy { margin: 0; color: #96a2a5; font-size: 14px; line-height: 1.85; }
-	.degree { display: flex; flex-direction: column; gap: 7px; padding-left: 20px; border-left: 2px solid var(--acid); }
-	.degree strong { font: 600 14px var(--display); }
-	.degree span { color: #6e7c80; font: 400 9px/1.6 var(--mono); text-transform: uppercase; }
+	.degree { display: flex; flex-direction: column; gap: 11px; padding: 6px 0 6px 26px; border-left: 3px solid var(--acid); }
+	.degree .degree-label { color: var(--acid); font: 500 9px/1.5 var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+	.degree strong { color: #e3e9ea; font: 600 clamp(25px, 2.5vw, 36px)/1.05 var(--display); letter-spacing: -.035em; }
+	.degree p { margin: 2px 0 0; color: #7e8b8f; font: 400 10px/1.75 var(--mono); text-transform: uppercase; }
 
 	.contact { padding: 120px 0 45px; border-top: 1px solid var(--line); }
 	.contact h2 { margin: 38px 0 16px; color: #7f8d90; font: 600 clamp(38px, 5.7vw, 82px)/1 var(--display); letter-spacing: -0.06em; }
@@ -599,7 +622,7 @@ const experience = [
 		.experience-list article { grid-template-columns: 110px 1fr; }
 		.experience-copy, .stack { grid-column: 2; }
 		.about { grid-template-columns: 1fr; gap: 34px; align-items: start; }
-		.degree { max-width: 330px; }
+		.degree { max-width: 520px; }
 	}
 
 	@media (max-width: 560px) {

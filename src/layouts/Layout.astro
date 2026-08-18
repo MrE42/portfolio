@@ -2,23 +2,27 @@
 interface Props {
 	title?: string;
 	description?: string;
+	theme?: 'portfolio' | 'eva';
 }
 
 const {
 	title = 'Elijah Schoneweis | Software Engineer',
 	description = 'Software engineer building gameplay systems, scientific tools, and applied AI. Creator of the RiskOfImpact mod for Risk of Rain 2.',
+	theme = 'portfolio',
 } = Astro.props;
+
+const isEva = theme === 'eva';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class:list={{ 'eva-theme': isEva }}>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
-		<meta name="theme-color" content="#080709" />
+		<meta name="theme-color" content={isEva ? '#080709' : '#090d0f'} />
 		<title>{title}</title>
 	</head>
 	<body>
@@ -27,14 +31,20 @@ const {
 </html>
 
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=DM+Mono:wght@400;500&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700&display=swap');
 
 	:root {
 		color-scheme: dark;
+		font-family: 'Manrope', sans-serif;
+		background: #090d0f;
+		color: #e9eff0;
+		font-synthesis: none;
+	}
+
+	html.eva-theme {
 		font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
 		background: #080709;
 		color: #f2eee7;
-		font-synthesis: none;
 	}
 
 	* {
@@ -63,6 +73,11 @@ const {
 	}
 
 	::selection {
+		background: #d9ff43;
+		color: #090d0f;
+	}
+
+	html.eva-theme ::selection {
 		background: #c7ff1a;
 		color: #080709;
 	}

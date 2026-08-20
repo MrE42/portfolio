@@ -17,10 +17,10 @@ const hexCells = Array.from({ length: 24 });
 	theme="eva"
 >
 	<div class="travel-shell">
-		<div class="field-rail" aria-hidden="true"><strong>E42</strong><span>FIELD OPERATIONS ARCHIVE // 2024</span><i>RECORD STATUS: OPEN</i></div>
+		<div class="field-rail" aria-hidden="true"><strong>ES</strong><span>FIELD OPERATIONS ARCHIVE // 2024</span><i>RECORD STATUS: OPEN</i></div>
 		<header class="nav" aria-label="Primary navigation">
 			<a class="wordmark" href="/" aria-label="Elijah Schoneweis, portfolio home">
-				<span class="mark">E42</span>
+				<span class="mark"><img src="https://avatars.githubusercontent.com/u/89532300?v=4" alt="" width="37" height="37" /></span>
 				<span class="wordmark-text">E. Schoneweis // Field Records</span>
 			</a>
 			<nav>
@@ -30,7 +30,7 @@ const hexCells = Array.from({ length: 24 });
 				<a class="instagram" href="https://www.instagram.com/mister_e.42/" target="_blank" rel="noreferrer">Instagram <span>↗</span></a>
 			</nav>
 		</header>
-		<div class="warning-tape" aria-hidden="true"><span>EXTERNAL OPERATIONS</span><i></i><span>ARCHIVE 2024</span><i></i><span>ROUTE DATA VERIFIED</span><i></i><span>FIELD UNIT E42</span></div>
+		<div class="warning-tape" aria-hidden="true"><span>EXTERNAL OPERATIONS</span><i></i><span>ARCHIVE 2024</span><i></i><span>ROUTE DATA VERIFIED</span><i></i><span>FIELD UNIT ES</span></div>
 
 		<main>
 			<section class="hero">
@@ -206,7 +206,8 @@ const hexCells = Array.from({ length: 24 });
 	.travel-shell { overflow: hidden; background: var(--night); color: var(--white); }
 	.nav { position: absolute; z-index: 20; top: 0; left: 50%; display: flex; align-items: center; justify-content: space-between; width: min(1400px, calc(100% - 96px)); padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,.25); transform: translateX(-50%); }
 	.wordmark { display: flex; align-items: center; gap: 13px; text-decoration: none; }
-	.mark { display: grid; place-items: center; width: 37px; height: 37px; border: 1px solid var(--orange); color: var(--orange); font: 500 11px var(--mono); clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px); }
+	.mark { display: grid; place-items: center; width: 37px; height: 37px; overflow: hidden; border: 1px solid var(--orange); color: var(--orange); font: 500 11px var(--mono); clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px); }
+	.mark img { width: 100%; height: 100%; object-fit: cover; }
 	.wordmark-text { font: 600 15px var(--display); }
 	.nav nav { display: flex; align-items: center; gap: 32px; }
 	.nav nav a { color: rgba(255,255,255,.76); font: 500 10px var(--mono); text-decoration: none; text-transform: uppercase; letter-spacing: .09em; }
